@@ -1,0 +1,16 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    steps:  
+    - name: Setup MSBuild.exe
+      working-directory: build
+      run: startenv.bat
+
+    - name: Build
+      run: msbuild msbuild.proj
