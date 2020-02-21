@@ -12,7 +12,8 @@ jobs:
       
     - name: Setup MSBuild.exe
       working-directory: Build
-      run: call "startenv.bat"
+      shell: cmd
+      run: startenv.bat
 
     - name: Build
       run: msbuild msbuild.proj
