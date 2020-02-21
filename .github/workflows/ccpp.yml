@@ -16,3 +16,6 @@ jobs:
       run: startenv.bat
                  
     - name: build
+      working-directory: Build
+      shell: cmd
+      run: build.bat
