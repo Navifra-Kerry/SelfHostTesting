@@ -13,5 +13,8 @@ goto EOF
 echo Usage of startenv
 echo   startenv.bat path_to_build
 
+SET TARGET=FullBuild
+msbuild msbuild.proj /t:%TARGET% 
+
 :EOF
 @echo on
