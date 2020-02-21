@@ -7,7 +7,9 @@ jobs:
 
     runs-on: [self-hosted, windows]
     
-    steps:  
+    steps:
+    - uses: actions/checkout@master
+      
     - name: Setup MSBuild.exe
       working-directory: Build
       run: call "startenv.bat"
