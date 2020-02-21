@@ -5,11 +5,11 @@ on: [push]
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: self-hosted
     
     steps:  
     - name: Setup MSBuild.exe
-      working-directory: build
+      working-directory: Build
       run: startenv.bat
 
     - name: Build
