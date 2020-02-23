@@ -1,0 +1,16 @@
+name: C/C++ CI
+
+on: [pull request]
+
+jobs:
+  build:
+
+    runs-on: [self-hosted, windows]
+    
+    steps:
+    - uses: actions/checkout@v1
+      
+    - name: Setup MSBuild.exe
+      working-directory: Build
+      shell: cmd
+      run: startenv.bat     
