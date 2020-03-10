@@ -3,7 +3,9 @@ name: C/C++ CI
 on: 
  push :
    branches:
-    - master    
+    - master
+ pull_request:
+       
 jobs:
   build:
 
@@ -15,4 +17,4 @@ jobs:
     - name: Setup MSBuild.exe
       working-directory: Build
       shell: cmd
-      run: startenv.bat   
+      run: startenv.bat 
